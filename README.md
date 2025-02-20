@@ -1,15 +1,24 @@
 # Generative Topology Optimization: Exploring Diverse Solutions in Structural Design
 
-[//]: # (- [ArXiv ]&#40;&#41;)
+### TL;DR
+Generative Topology Optimization (GenTO) is a novel method that uses neural fields, a solver-in-the-loop and an explicit diversity constraint to generate diverse and structurally compliant shapes without data.
+
+- [ArXiv ](https://arxiv.org/abs/2502.13174)
 
 - The code is combined with [Geometry-informed Neural Networks (GINNs)](https://github.com/ml-jku/GINNs-Geometry-informed-Neural-Networks).
 
 ---
 
-Generative Topology Optimization (GenTO) is a novel method that uses neural networks to generate diverse and structurally compliant shapes without relying on pre-existing data.
-Unlike traditional topology optimization methods, GenTO can explore multiple design solutions simultaneously, thanks to an explicit diversity constraint.
-It optimizes material distribution iteratively with a solver-in-the-loop approach, producing varied shapes that meet design requirements efficiently.
-Validated on both 2D and 3D problems, GenTO outperforms previous methods in diversity and speed, offering significant advancements in engineering and design flexibility.
+## Abstract 
+
+Topology optimization (TO) is a family of computational methods that derive near-optimal geometries from formal problem descriptions. 
+Despite their success, established TO methods are limited to generating single solutions, restricting the exploration of alternative designs. 
+To address this limitation, we introduce Generative Topology Optimization (GenTO) - a data-free method that trains a neural network to generate structurally compliant shapes and explores diverse solutions through an explicit diversity constraint. 
+The network is trained with a solver-in-the-loop, optimizing the material distribution in each iteration. 
+The trained model produces diverse shapes that closely adhere to the design requirements. 
+We validate GenTO on 2D and 3D TO problems. 
+Our results demonstrate that GenTO produces more diverse solutions than any prior method while maintaining near-optimality and being an order of magnitude faster due to inherent parallelism. 
+These findings open new avenues for engineering and design, offering enhanced flexibility and innovation in structural optimization.
 
 <table style="width:1000px; border:none; border-collapse:collapse">
   <tr style="border:none">
@@ -60,11 +69,14 @@ The following figure shows 3 modes from top and perspective view.
 
 <img src="media/Jeb-combined_0_4_6.png" alt="Diverse results on cantilever" width="300">
 
-[//]: # (## Citation)
+## Citation
 
-[//]: # ()
-[//]: # (```)
-
-[//]: # ()
-[//]: # (```)
+```
+@article{radler2025GenTO,
+  title={Generative Topology Optimization: Exploring Diverse Solutions in Structural Design},
+  author={Radler, Andreas and Volkmann, Eric and Brandstetter, Johannes and Berzins, Arturs},
+  journal={arXiv preprint arXiv:2502.13174},
+  year={2025}
+}
+```
 
