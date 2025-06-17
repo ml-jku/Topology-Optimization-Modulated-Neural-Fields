@@ -1,7 +1,7 @@
-# Generative Topology Optimization: Exploring Diverse Solutions in Structural Design
+# Diverse Topology Optimization using Modulated Neural Fields
 
 ### TL;DR
-Generative Topology Optimization (GenTO) is a novel method that uses neural fields, a solver-in-the-loop and an explicit diversity constraint to generate diverse and structurally compliant shapes without data.
+**T**opology **O**ptimization using **M**odulated Neural Fields (TOM) is a novel method that uses neural fields, a solver-in-the-loop and an explicit diversity constraint to generate diverse and structurally compliant shapes without data.
 
 - [ArXiv ](https://arxiv.org/abs/2502.13174)
 
@@ -13,11 +13,11 @@ Generative Topology Optimization (GenTO) is a novel method that uses neural fiel
 
 Topology optimization (TO) is a family of computational methods that derive near-optimal geometries from formal problem descriptions. 
 Despite their success, established TO methods are limited to generating single solutions, restricting the exploration of alternative designs. 
-To address this limitation, we introduce Generative Topology Optimization (GenTO) - a data-free method that trains a neural network to generate structurally compliant shapes and explores diverse solutions through an explicit diversity constraint. 
+To address this limitation, we introduce Topology Optimization using Modulated Neural Fields (TOM) - a data-free method that trains a neural network to generate structurally compliant shapes and explores diverse solutions through an explicit diversity constraint. 
 The network is trained with a solver-in-the-loop, optimizing the material distribution in each iteration. 
 The trained model produces diverse shapes that closely adhere to the design requirements. 
-We validate GenTO on 2D and 3D TO problems. 
-Our results demonstrate that GenTO produces more diverse solutions than any prior method while maintaining near-optimality and being an order of magnitude faster due to inherent parallelism. 
+We validate TOM on 2D and 3D TO problems. 
+Our results demonstrate that TOM produces more diverse solutions than any prior method while maintaining near-optimality and being an order of magnitude faster due to inherent parallelism. 
 These findings open new avenues for engineering and design, offering enhanced flexibility and innovation in structural optimization.
 
 <table style="width:1000px; border:none; border-collapse:collapse">
@@ -44,12 +44,14 @@ The diversity loss is determined by comparing the surface points of the shapes u
 This comparison helps compute the diversity loss and its gradient.
 
 
-<img src="media/GenTO-method.png" alt="Description of the image" height="200">
+<img src="media/TOM-method.png" alt="Description of the image" height="200">
 
 
 ## Results
 
-The produced shapes are more diverse than the baseline, i.e., the Deflated Barrier method ([ArXiv](https://arxiv.org/abs/2004.11797)).
+The produced shapes are more diverse than the baselines.
+TopoDiff ([ArXiv](https://arxiv.org/abs/2208.09591)) is a neural network which produces diverse shapes, but with a poor compliance.
+The Deflated Barrier method ([ArXiv](https://arxiv.org/abs/2004.11797)) produces only 2 shapes with excellent compliance.
 
 <table style="width:1000px; border:none; border-collapse:collapse">
   <tr style="border:none">
@@ -72,8 +74,8 @@ The following figure shows 3 modes from top and perspective view.
 ## Citation
 
 ```
-@article{radler2025GenTO,
-  title={Generative Topology Optimization: Exploring Diverse Solutions in Structural Design},
+@article{radler2025TOM,
+  title={Diverse Topology Optimization using Modulated Neural Fields},
   author={Radler, Andreas and Volkmann, Eric and Brandstetter, Johannes and Berzins, Arturs},
   journal={arXiv preprint arXiv:2502.13174},
   year={2025}
